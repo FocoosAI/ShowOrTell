@@ -46,4 +46,3 @@ wandb/
 models/**/*.pkl
 *.bin
 *.pt
-datasets/**
