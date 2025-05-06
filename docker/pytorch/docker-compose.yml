@@ -1,0 +1,17 @@
+services:
+  prompting:
+    image: gabrysse/showortell:torch
+    container_name: showortell-torch
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes:
+      - ../..:/workspace/ShowOrTell
+    shm_size: 8g
+    ulimits:
+      memlock: -1
+    stdin_open: true
+    tty: true
+    working_dir: /workspace/ShowOrTell

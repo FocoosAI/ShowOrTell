@@ -1,0 +1,33 @@
+
+:=========== Few-shot Seg. with Matcher ===========
+|             datapath: /workspace/datatasets   
+|            benchmark: coco                    
+|                  bsz: 1                       
+|              nworker: 0                       
+|                 fold: 0                       
+|                nshot: 1                       
+|             img_size: 518                     
+|             pad_size: 896                     
+| use_original_imgsize: False                   
+|             log_root: ./log/coco/1shot/fold0  
+|            visualize: 0                       
+|                  vis: 0                       
+|           feat_chans: 256                     
+|     image_enc_use_fc: False                   
+|             pt_model: dinov2                  
+|          dinov2_size: vit_large               
+|       dinov2_weights: models/dinov2_vitl14_pretrain.pth
+|         sine_weights: pytorch_model.bin       
+|    transformer_depth: 6                       
+|   transformer_nheads: 8                       
+|  transformer_mlp_dim: 2048                    
+| transformer_mask_dim: 256                     
+| transformer_fusion_layer_depth: 1                       
+| transformer_num_queries: 200                     
+| transformer_pre_norm: True                    
+|      score_threshold: 0.7                     
+:================================================
+
+# available GPUs: 1
+using MLP layer as FFN
+Pretrained weights found at models/dinov2_vitl14_pretrain.pth and loaded with msg: <All keys matched successfully>

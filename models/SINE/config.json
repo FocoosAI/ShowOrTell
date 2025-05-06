@@ -1,0 +1,16 @@
+{
+    "img_size": 518,
+    "pad_size": 896,
+    "feat_chans": 256,
+    "image_enc_use_fc": false,
+    "pt_model": "dinov2",
+    "dinov2_size": "vit_large",
+    "transformer_depth": 6,
+    "transformer_nheads": 8,
+    "transformer_mlp_dim": 2048,
+    "transformer_mask_dim": 256,
+    "transformer_fusion_layer_depth": 1,
+    "transformer_num_queries": 200,
+    "transformer_pre_norm": true,
+    "score_threshold": 0.7
+}

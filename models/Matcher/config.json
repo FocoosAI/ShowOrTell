@@ -1,0 +1,33 @@
+{
+    "dinov2_size": "vit_large",
+    "sam_size": "vit_h",
+    "points_per_side": 64,
+    "pred_iou_thresh": 0.88,
+    "stability_score_thresh": 0.95,
+    "sel_stability_score_thresh": 0.9,
+    "iou_filter": 0.85,
+    "box_nms_thresh": 0.65,
+    "output_layer": 3,
+    "dense_multimask_output": 0,
+    "use_dense_mask": 1,
+    "multimask_output": 1,
+    "num_centers": 8,
+    "use_box": false,
+    "use_points_or_centers": true,
+    "sample_range": [
+        1,
+        6
+    ],
+    "max_sample_iterations": 64,
+    "alpha": 1.0,
+    "beta": 0.0,
+    "exp": 0.0,
+    "emd_filter": 0.0,
+    "purity_filter": 0.02,
+    "coverage_filter": 0.0,
+    "use_score_filter": true,
+    "deep_score_filter": 0.33,
+    "deep_score_norm_filter": 0.1,
+    "topk_scores_threshold": 0.0,
+    "num_merging_mask": 9
+}

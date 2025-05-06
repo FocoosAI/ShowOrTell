@@ -1,0 +1,5 @@
+{
+    "dinov2_size": "vit_large",
+    "sam_size": "vit_h",
+    "img_size": 518
+}
