@@ -4,9 +4,7 @@
   <a href="https://scholar.google.com/citations?user=8AfX1GcAAAAJ">Gabriele Rosi</a> • <a href="https://fcdl94.github.io/">Fabio Cermelli</a>
   <br><br>
   
-  <!--- [![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/1234.56789) -->
-
-  [![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg)](https://arxiv.org/abs/1234.56789)
+  [![arXiv](https://img.shields.io/badge/arXiv-2505.06280-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2505.06280)
     
 </h4>
 
@@ -97,7 +95,7 @@ To download only specific datasets:
 cd datasets && bash downloader.sh --<DATASET_NAME>
 ```
 
-**Available datasets:** `pascalvoc`, `ade20k`, `cityscapes`, `houseparts`, `pizza`, `toolkits`, `trash`, `loveda`, `zerowaste`, `mhpv1`, `pidray`, `uecfood`, `uavid`
+**Available datasets:** `pascalvoc`, `ade20k`, `cityscapes`, `houseparts`, `pizza`, `toolkits`, `trash`, `loveda`, `zerowaste`, `mhpv1`, `pidray`, `uecfood`, `uavid`.
 
 For more options, run:
 ```bash
@@ -114,18 +112,26 @@ After implementing your model, run the evaluation with:
 
 ### Single GPU
 ```bash
-python3 benchmark.py --model-name <MODEL_NAME> --nprompts <1 or 5>
+python3 benchmark.py \
+        --model-name GFSAM --nprompts 5 \
+        --benchmark pizza
 ```
+
+- **Available models**: `GFSAM`, `Matcher`, `PersonalizeSAM`, `SINE`. 
+- **Available datasets**: `pascal`, `cityscapes`, `ade20k`, `lovedarural`, `lovedaurban`, `mhpv1`, `pidray`, `houseparts`, `pizza`, `toolkits`, `trash`, `uecfood`, `zerowaste`, `uavid`.
 
 ### Multi GPU
 ```bash
-torchrun --nproc_per_node=<NGPUS> benchmark.py \
-         --model-name <MODEL_NAME> --nprompts <1 or 5>
+torchrun --nproc_per_node=2 benchmark.py \
+         --model-name GFSAM --nprompts 5 \
+         --benchmark pizza
 ```
+
+Change `--nproc_per_node` with the desired GPU number.
 
 ### Additional Options
 
-- `--datapath <DATASETS_PATH>`: Specify custom datasets folder (default: `./datasets`)
-- `--checkpointspath <CHECKPOINTS_PATH>`: Custom folder for model checkpoints (default: `./models/checkpoints`)
-- `--seed <SEED>`: Set a specific random seed
-- `--save-visualization`: Save visualization of predictions for the first 50 images
+- `--datapath <DATASETS_PATH>`: Specify custom datasets folder (default: `./datasets`).
+- `--checkpointspath <CHECKPOINTS_PATH>`: Custom folder for model checkpoints (default: `./models/checkpoints`).
+- `--seed <SEED>`: Set a specific random seed.
+- `--save-visualization`: Save visualization of predictions for the first 50 images. Visualization will be available in the `predictions` folder.
