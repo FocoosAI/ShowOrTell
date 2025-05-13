@@ -110,6 +110,7 @@ if __name__ == "__main__":
             "trash",
             "uecfood",
             "zerowaste",
+            "uavid",
         ],
     )
     parser.add_argument("--model-name", type=str, required=True)
