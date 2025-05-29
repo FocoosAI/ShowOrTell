@@ -135,3 +135,15 @@ Change `--nproc_per_node` with the desired GPU number.
 - `--checkpointspath <CHECKPOINTS_PATH>`: Custom folder for model checkpoints (default: `./models/checkpoints`).
 - `--seed <SEED>`: Set a specific random seed.
 - `--save-visualization`: Save visualization of predictions for the first 50 images. Visualization will be available in the `predictions` folder.
+
+## Citation
+If you find this project helpful for your research, please consider citing the following BibTeX entry.
+
+```BibTeX
+@article{rosi2025show,
+  title={Show or Tell? A Benchmark To Evaluate Visual and Textual Prompts in Semantic Segmentation},
+  author={Rosi, Gabriele and Cermelli, Fabio},
+  journal={arXiv preprint arXiv:2505.06280},
+  year={2025}
+}
+```
